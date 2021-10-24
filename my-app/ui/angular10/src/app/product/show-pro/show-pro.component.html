@@ -1,0 +1,25 @@
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <!--Column names-->
+            <th>ProductId</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--Create rows based on amount of data in productlist-->
+        <tr *ngFor="let dataItem of ProductList">
+            <!--string interpolation will incorporate dynamic string values-->
+            <td>{{dataItem.ProductId}}</td>
+            <td>{{dataItem.Name}}</td>
+            <td>{{dataItem.Price}}</td>
+            <td>{{dataItem.Stock}}</td>
+            <td><img src="{{dataItem.Image}}" width="60px" height="60px"></td>
+        </tr>
+    </tbody>
+</table>
+
